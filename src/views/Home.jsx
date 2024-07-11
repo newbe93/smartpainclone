@@ -88,15 +88,22 @@ const Home = () => {
 
         const tl = gsap.timeline()
         
-        tl.from(logo,{
-            width : "100%",
-            height : "100vh",
-            autoAlpha : 0,
-        })
-        .to(logo,{
+        gsap.set(logo, {
+            width: "100%",
+            height: "100vh",
+            autoAlpha: 0,
+            
+        });
+
+        // tl.from(logo,{
+        //     width : "100%",
+        //     height : "100vh",
+        //     autoAlpha : 0,
+        // })
+        tl.to(logo,{
             autoAlpha : 1,
             duration :1,
-            immediateRender : true
+            
         })
         .to(logo,{
             top : "3vw",
@@ -104,7 +111,7 @@ const Home = () => {
             width : "8vw",
             height : "8vw",
             duration : 1,
-            immediateRender : true
+            
         },"+=0.5")
         .from(Msection,{
             yPercent : 100
@@ -112,7 +119,7 @@ const Home = () => {
         .to(Msection, {
             yPercent : 0,
             duration : 1,
-            immediateRender : true
+            
         },"<")
 
         // 
