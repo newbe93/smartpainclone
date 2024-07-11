@@ -95,21 +95,24 @@ const Home = () => {
         })
         .to(logo,{
             autoAlpha : 1,
-            duration :1
+            duration :1,
+            immediateRender : true
         })
         .to(logo,{
             top : "3vw",
             left : "4vw",
             width : "8vw",
             height : "8vw",
-            duration : 1
+            duration : 1,
+            immediateRender : true
         },"+=0.5")
         .from(Msection,{
             yPercent : 100
         },"<")
         .to(Msection, {
             yPercent : 0,
-            duration : 1
+            duration : 1,
+            immediateRender : true
         },"<")
 
         // 
